@@ -23,6 +23,7 @@ public class MultiplyCompositeTest {
 		assertEquals(2, multiplyComposite.getResult());
 	}
 
+	@Test
 	public void testTwoElementMultiplyComposite() {
 
 		NumberLeaf number2 = new NumberLeaf(2);
@@ -33,6 +34,7 @@ public class MultiplyCompositeTest {
 		assertEquals(8, multiplyComposite.getResult());
 	}
 
+	@Test
 	public void testNestedMultiplyComposite() {
 
 		NumberLeaf number2 = new NumberLeaf(2);
