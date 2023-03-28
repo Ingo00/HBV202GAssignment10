@@ -29,7 +29,7 @@ public class MultiplyComposite implements MathExpression, Observer {
     }
 
     @Override
-    public void update(Observable observable, Object arg) {
+    public void update(Observable observable) {
         getResult(); // recalculate the result when an observed object changes
         System.out.println("New result: " + lastObservedResult); // print the new result to the screen
     }

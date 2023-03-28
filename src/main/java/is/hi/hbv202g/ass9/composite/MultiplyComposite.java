@@ -1,23 +1,25 @@
 package is.hi.hbv202g.ass9.composite;
 
+import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.MathComposite;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MultiplyComposite implements MathExpression{
-    private List<NumberLeaf> numberLeafs;
+    private List<MathExpression> componement;
 
     public MultiplyComposite() {
-        numberLeafs = new ArrayList<>();
+        componement = new ArrayList<>();
     }
 
-    public void add(NumberLeaf numberLeaf) {
-        numberLeafs.add(numberLeaf);
+    public void add(MathExpression mathExpression) {
+        componement.add(mathExpression);
     }
     @Override
     public int getResult() {
         int result = 1;
-        for (NumberLeaf numberLeaf : numberLeafs) {
-            result *= numberLeaf.getResult();
+        for (MathExpression mathExpression : componement) {
+            result *= mathExpression.getResult();
         }
         return result;
     }

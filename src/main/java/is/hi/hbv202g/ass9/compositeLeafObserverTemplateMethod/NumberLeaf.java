@@ -19,4 +19,6 @@ public class NumberLeaf extends Observable implements MathExpression {
     public int getResult() {
         return value;
     }
+
+
 }

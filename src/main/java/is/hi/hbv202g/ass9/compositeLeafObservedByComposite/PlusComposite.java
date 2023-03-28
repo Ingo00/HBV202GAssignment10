@@ -2,7 +2,6 @@ package is.hi.hbv202g.ass9.compositeLeafObservedByComposite;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class PlusComposite implements MathExpression, Observer {
 
@@ -36,7 +35,7 @@ public class PlusComposite implements MathExpression, Observer {
     }
 
     @Override
-    public void update() {
+    public void update(Observable observable) {
         getResult();
         System.out.println("PlusComposite: new result = " + lastObservedResult);
     }

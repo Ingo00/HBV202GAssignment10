@@ -4,20 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlusComposite implements MathExpression{
-    private List<NumberLeaf> numberLeafs;
+    private List<MathExpression> componement;
 
     public PlusComposite() {
-        numberLeafs = new ArrayList<>();
+        componement = new ArrayList<>();
     }
 
-    public void add(NumberLeaf numberLeaf) {
-        numberLeafs.add(numberLeaf);
+    public void add(MathExpression mathExpression) {
+        componement.add(mathExpression);
     }
     @Override
     public int getResult() {
         int result = 0;
-        for (NumberLeaf numberLeaf : numberLeafs) {
-            result += numberLeaf.getResult();
+        for (MathExpression mathExpression : componement) {
+            result += mathExpression.getResult();
         }
         return result;
     }
